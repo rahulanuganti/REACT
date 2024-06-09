@@ -1,1 +1,5 @@
-1. npx create-react-app Project_name
+npx create-react-app Project_name
+props used for accessing the variables from another js file.
+Cannot pass props upwards can only pass downwards.
+//State in react knows where to re-render the changes had been done.
+//useState is used as the method.
