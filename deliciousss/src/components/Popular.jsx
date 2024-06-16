@@ -31,28 +31,28 @@ function Popular() {
   return (
     <div>
       <Wrapper>
-      <h3>Popular Picks</h3>
-      <Splide 
-        options={{
-          perPage: 4,
-          arrows: false,
-          pagination: false,
-          drag: "free",
-          gap: "5rem",
-        }}
-      >
-        {popular.map( (recipe) => {
-          return(
-            <SplideSlide key={recipe.id}>
-                <Card>
-                  <p>{recipe.title}</p>
-                  <img src={recipe.image} alt={recipe.title} />
-                  <Gradient /> 
-                </Card>
-            </SplideSlide>
-          );
-        })} 
-      </Splide>
+        <h3>Popular Picks</h3>
+        <Splide 
+          options={{
+            perPage: 4,
+            arrows: false,
+            pagination: false,
+            drag: "free",
+            gap: "2rem",
+          }}
+        >
+          {popular.map( (recipe) => {
+            return(
+              <SplideSlide key={recipe.id}>
+                  <Card>
+                    <p>{recipe.title}</p>
+                    <img src={recipe.image} alt={recipe.title} />
+                    <Gradient /> 
+                  </Card>
+              </SplideSlide>
+            );
+          })} 
+        </Splide>
       </Wrapper>
     </div>
   );
@@ -60,10 +60,13 @@ function Popular() {
 
 const Wrapper = styled.div`
   margin: 4rem 0rem;
+  overflow: hidden;
 `;
 
 const Card = styled.div`
-  min-height: 25rem;
+  min-height: 18rem;
+  max-height: 24rem;
+  
   border-radius: 2rem;
   overflow: hidden;
   position: relative;
@@ -89,7 +92,7 @@ const Card = styled.div`
     font-weight: 600;
     font-size: 1rem;
     height: 40%;
-    display: flex;
+    display: flex;  
     justify-content: center;
     align-items: center;
 
